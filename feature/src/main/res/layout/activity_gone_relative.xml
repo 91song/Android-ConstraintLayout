@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource,HardcodedText,RtlHardcoded">
+
+    <!-- GONE widget，一般情况下，将不会显示在界面上，同时也不再是布局中的一部分。
+    但就布局计算而言，GONE Widget仍然是其中的一部分，这是有很大区别的。
+    1、对于布局传递，它们的尺寸将被视为零（基本上，它们将被解析为一个点）
+    2、如果他们对其他Widget有限制，这些限制仍然会得到体现，但任何边距都会等于零 -->
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="80dp"
+        android:paddingRight="80dp"
+        android:text="A"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_toRightOf="@id/btn_1"
+        android:text="B" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="C"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_3"
+        android:text="D" />
+</RelativeLayout>
